@@ -1,0 +1,46 @@
+#CmsEditScreen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101010;
+    position: relative;
+}
+
+#CmsEditScreenBodyOuter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#CmsEditScreenBody {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#CmsEditScreenSaveButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1;
+    min-width: 90px;
+    background-color: #F13F3F;
+    color: white;
+    border-radius: 22px;
+    padding: 10px 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    letter-spacing: 1px;
+}

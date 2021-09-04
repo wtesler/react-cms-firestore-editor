@@ -1,0 +1,63 @@
+{
+  "name": "react-cms-firestore-editor",
+  "version": "1.0.5",
+  "description": "An editor for react-cms-firestore. Edit cms data from the web. Easily integrate this into your own react website.",
+  "author": "Will Tesler",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wtesler/react-cms-firestore-editor.git"
+  },
+  "homepage": "https://github.com/wtesler/react-cms-firestore-editor",
+  "keywords": [
+    "react",
+    "cms",
+    "firestore",
+    "editor"
+  ],
+  "scripts": {
+    "build": "npm run clean && babel src --out-dir dist --copy-files",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "firebase": "9.0.0-beta.6",
+    "query-string": "7.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-basic-icon": "1.0.7",
+    "react-cms-firestore": "1.0.7",
+    "react-forms-input": "1.0.3",
+    "react-hoc-di": "1.1.5",
+    "react-root-overlays": "1.0.4",
+    "react-router-dom": "5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "rimraf": "3.0.2"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry",
+          "corejs": 3
+        }
+      ],
+      "@babel/preset-react"
+    ],
+    "plugins": []
+  },
+  "browserslist": [
+    ">0.25%",
+    "not dead"
+  ]
+}

@@ -1,0 +1,196 @@
+.CmsSection {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.CmsSectionHeaderOuter {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.CmsSectionHeader {
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.CmsSectionEntry {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.57);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(36, 36, 36);
+
+}
+
+.CmsSectionEntryHeader {
+    width: 100%;
+    color: #e7e7e7;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.CmsSectionEntryHeaderTitle {
+    flex: 1;
+    color: #E7E7E7FF;
+}
+
+.CmsSectionItem {
+    display: flex;
+    flex-direction: row;
+}
+
+.CmsSectionItem :not(:first-child) {
+    padding-left: 20px;
+}
+
+.CmsSectionItemPart {
+    flex: 1;
+    align-self: flex-end;
+}
+
+.CmsSectionItemPartInputTitle {
+    color: #E7E7E7FF !important;
+}
+
+.CmsSectionItemPartInputText {
+    color: #E7E7E7FF !important;
+    background-color: #1d1d1d !important;
+}
+
+.CmsSectionItemRemove {
+    height: 38px;
+    flex: 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.CmsSectionItemRemoveIcon {
+    width: 20px;
+}
+
+@media (hover: hover) {
+    .CmsSectionItemRemoveIcon:hover {
+        transform: scale(1.05);
+    }
+}
+
+.CmsSectionItemAdd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 1s;
+    margin-top: 25px;
+    margin-right: 40px;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+@media (hover: hover) {
+    .CmsSectionItemAdd:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.CmsSectionItemAddPrompt {
+    color: white;
+    margin-right: 10px;
+}
+
+.CmsSectionItemAddIcon {
+    width: 20px;
+    filter: hue-rotate(150deg);
+}
+
+.CmsSectionEntryAdd {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 1s;
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+}
+
+.CmsSectionEntryAddIcon {
+    width: 20px;
+    filter: hue-rotate(150deg);
+}
+
+@media (hover: hover) {
+    .CmsSectionEntryAddIcon:hover {
+        transform: scale(1.05);
+    }
+}
+
+.CmsSectionEntryRemove {
+    height: 20px;
+    flex: 0 0 20px;
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.CmsSectionEntryRemoveIcon {
+    width: 20px;
+}
+
+@media (hover: hover) {
+    .CmsSectionEntryRemoveIcon:hover {
+        transform: scale(1.05);
+    }
+}
+
+.CmsSectionDeleteSelf {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.57);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(25, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    .CmsSectionDeleteSelf:hover {
+        background-color: rgba(25, 0, 0, 0.4);
+    }
+}
+
+.CmsSectionDeleteSelfText {
+    color: #ff3d3d;
+    font-weight: 700;
+    text-transform: uppercase;
+}
