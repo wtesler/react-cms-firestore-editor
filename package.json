@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "query-string": "^7",
-    "react-basic-icon": "^1.0.7",
+    "react-basic-icon": "^1.0.8",
     "react-cms-firestore": "^1.0.8",
     "react-forms-input": "^1.0.3",
     "react-hoc-di": "^1.1.6",
