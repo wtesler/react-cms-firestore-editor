@@ -1,4 +1,11 @@
 node_modules/*
 .idea/*
 dist/*
-test-env/node_modules/*
+src/test-env/src/Components/Root/Firebase/FIREBASE_CONFIG.json
+src/test-env/src/Components/Root/Firebase/FIREBASE_CONFIG.js
+src/test-env/src/Components/Root/Firebase/firebase_config.json
+src/test-env/src/Components/Root/Firebase/firebase_config.js
+src/test-env/src/Components/Root/Firebase/firebaseConfig.json
+src/test-env/src/Components/Root/Firebase/firebaseConfig.js
+src/test-env/src/Components/Root/Firebase/firebaseconfig.json
+src/test-env/src/Components/Root/Firebase/firebaseconfig.js

@@ -15,7 +15,7 @@ import {CmsClient} from "react-cms-firestore";
 import {withModule} from "react-hoc-di";
 
 const CmsLandingScreen = props => {
-  const {module, history} = props;
+  const {module, history, headerClass} = props;
   const {toastRelay, dialogRelay} = module;
 
   const [sections, setSections] = useState(null);
@@ -77,7 +77,7 @@ const CmsLandingScreen = props => {
 
     return (
       <div id='CmsLandingScreenBodyOuter'>
-        <div id='CmsLandingScreenBodyHeader' className={`ThemeHeader`}>{EDIT_WEBSITE}</div>
+        <div id='CmsLandingScreenBodyHeader' className={headerClass}>{EDIT_WEBSITE}</div>
         <div id='CmsLandingScreenBody'>
           {elements}
         </div>

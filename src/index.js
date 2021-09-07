@@ -1,3 +1,11 @@
-import CmsScreen from './CmsScreen';
-import CmsEditScreen from './Edit/CmsEditScreen';
-export default CmsScreen;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import Root from './test-env/src/Components/Root/Root';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Root/>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
