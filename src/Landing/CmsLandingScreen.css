@@ -1,0 +1,102 @@
+#CmsLandingScreen {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #101010;
+}
+
+#CmsLandingScreenBodyOuter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+#CmsLandingScreenBody {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#CmsLandingScreenBodyHeader {
+    margin-bottom: 20px;
+    color: #e8e8e8;
+}
+
+.CmsLandingScreenSectionOuter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.CmsLandingScreenSection {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgb(42, 42, 42);
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    color: #e0e0e0;
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+@media (hover: hover) {
+    .CmsLandingScreenSection:hover {
+        background-color: rgb(31, 31, 31);
+    }
+}
+
+.CmsLandingScreenDeleteSection {
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: auto;
+    right: 15px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+
+@media (hover: hover) {
+    .CmsLandingScreenDeleteSection:hover {
+        transform: scale(1.08);
+    }
+}
+
+.CmsLandingScreenDeleteSectionIcon {
+    width: 20px;
+}
+
+.CmsLandingScreenAddSection {
+    width: 100%;
+}
+
+.CmsLandingScreenAddSectionPrompt {
+    margin-right: 10px;
+}
+
+.CmsLandingScreenAddSectionIcon {
+    width: 20px;
+    filter: hue-rotate(150deg);
+}
