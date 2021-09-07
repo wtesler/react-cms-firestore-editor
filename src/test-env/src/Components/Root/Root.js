@@ -9,12 +9,15 @@ import CmsScreen from "../../../../lib/index";
 const Root = () => {
   // const main = <CmsScreen/>;
 
+  const path = '/cms';
+
   return (
     <div id='Root'>
       <FirebaseStartup/>
       <BrowserRouter>
         <Switch>
-          <Route><CmsScreen/></Route>
+          <Route path={path}><CmsScreen/></Route>
+          <Route>{"Go to /cms"}</Route>
         </Switch>
       </BrowserRouter>
     </div>

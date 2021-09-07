@@ -77,13 +77,13 @@ const CmsLandingScreen = props => {
 
     return (
       <div id='CmsLandingScreenBodyOuter'>
-        <div id='CmsLandingScreenBodyHeader' className={headerClass}>{EDIT_WEBSITE}</div>
+        <div id='CmsLandingScreenBodyHeader' className={headerClass ? headerClass : ''}>{EDIT_WEBSITE}</div>
         <div id='CmsLandingScreenBody'>
           {elements}
         </div>
       </div>
     );
-  }, [sections, onAddClick]);
+  }, [sections, onAddClick, headerClass]);
 
   return (
     <div id="CmsLandingScreen">
