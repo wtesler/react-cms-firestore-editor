@@ -1,6 +1,6 @@
 import {useEffect} from 'react';
 import {initializeApp} from 'firebase/app';
-import firebaseConfig from "./FIREBASE_CONFIG.json";
+import firebaseConfig from "../../../Config/FIREBASE_CONFIG.json";
 
 const FirebaseStartup = () => {
 
