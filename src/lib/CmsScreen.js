@@ -8,7 +8,11 @@ import {withRouter} from "react-router-dom";
 import CmsEditScreen from "./Edit/CmsEditScreen";
 
 const CmsScreen = props => {
-  const {match} = props;
+  const {match, module} = props;
+
+  if (match.isExact) {
+    module.rootPath = match.path;
+  }
 
   // const withLogin = (component) => {
   //   return () => (

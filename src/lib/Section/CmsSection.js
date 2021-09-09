@@ -7,13 +7,12 @@ import plusImage from "../Images/plus.svg";
 import AddEntryModal from "../Edit/AddEntry/AddEntryModal";
 import {DELETING, FAILED_DELETE_SECTION} from "../Constants/i18n";
 import {withRouter} from "react-router-dom";
-import {ROUTE_CMS} from "../Constants/routes";
 import {CmsClient} from "react-cms-firestore";
 import {Icon} from "react-basic-icon";
 
 const CmsSection = props => {
   const {cmsKey, data, module, requests, history} = props;
-  const {toastRelay, dialogRelay} = module;
+  const {toastRelay, dialogRelay, rootPath} = module;
 
   const [dirtyFlag, setDirtyFlag] = useState(Number.MIN_SAFE_INTEGER);
 
@@ -94,13 +93,13 @@ const CmsSection = props => {
         toastRelay.show(DELETING, true);
         await CmsClient.deleteCmsSection(cmsKey, requests);
         toastRelay.show(null);
-        history.push(ROUTE_CMS);
+        history.push(rootPath);
       }
     } catch (e) {
       console.error(e);
       toastRelay.show(FAILED_DELETE_SECTION, false, 5000);
     }
-  }, [toastRelay, requests, cmsKey, history]);
+  }, [toastRelay, requests, cmsKey, history, rootPath]);
 
   const items = useMemo(() => {
     const elements = [];
