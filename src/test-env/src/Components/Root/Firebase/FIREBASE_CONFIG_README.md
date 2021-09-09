@@ -1,4 +1,4 @@
-Insert a json file as a sibling to this file. It should look something like:
+Insert a json file called `FIREBASE_CONFIG.json` as a sibling to this file. It should look something like:
 ```
 {
 "apiKey": "API_KEY",
