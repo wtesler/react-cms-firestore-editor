@@ -15,7 +15,7 @@ const CmsScreen = import('react-cms-firestore-editor');
 
 ### Firebase config for test environment:
 
-See `FIREBASE_CONFIG_README.md` in `src/Components/Root/Firebase`.
+See `FIREBASE_CONFIG_README.md` in `src/Config`.
 
 You add the config file `FIREBASE_CONFIG.json` at that level.
 
