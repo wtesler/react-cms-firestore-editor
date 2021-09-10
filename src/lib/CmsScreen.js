@@ -6,6 +6,7 @@ import {RootOverlays} from "react-root-overlays";
 import CmsLandingScreen from "./Landing/CmsLandingScreen";
 import {withRouter} from "react-router-dom";
 import CmsEditScreen from "./Edit/CmsEditScreen";
+import {LoginPortal} from 'react-firebase-login';
 
 const CmsScreen = props => {
   const {match, module} = props;
@@ -14,12 +15,6 @@ const CmsScreen = props => {
     module.rootPath = match.path;
   }
 
-  // const withLogin = (component) => {
-  //   return () => (
-  //     {component}
-  //   )
-  // }
-
   const page = useMemo(() => {
     return match.isExact ? <CmsLandingScreen/> : <CmsEditScreen/>;
   }, [match])
@@ -27,7 +22,9 @@ const CmsScreen = props => {
   return (
     <div className={'CmsScreen'}>
       <RootOverlays>
-        {page}
+        <LoginPortal>
+          {page}
+        </LoginPortal>
       </RootOverlays>
     </div>
   );
