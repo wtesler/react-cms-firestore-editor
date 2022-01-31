@@ -1,6 +1,6 @@
 {
   "name": "react-cms-firestore-editor",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "An editor for react-cms-firestore. Edit cms data from the web. Easily integrate this into your own react website.",
   "author": "Will Tesler",
   "license": "Apache-2.0",
@@ -27,7 +27,7 @@
     "react-firebase-login": "^1.0.9",
     "react-forms-input": "^1.0.4",
     "react-hoc-di": "^1.1.7",
-    "react-root-overlays": "^1.0.7"
+    "react-root-overlays": "^1.0.9"
   },
   "peerDependencies": {
     "firebase": "^9",
@@ -54,13 +54,6 @@
   ],
   "babel": {
     "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "useBuiltIns": "entry",
-          "corejs": 3
-        }
-      ],
       "@babel/preset-react"
     ],
     "plugins": []
