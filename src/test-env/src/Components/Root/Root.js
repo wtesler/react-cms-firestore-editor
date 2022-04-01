@@ -1,6 +1,6 @@
 import React from 'react';
 import './Root.css';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import FirebaseStartup from "./Firebase/FirebaseStartup";
 import CmsScreen from "../../../../lib/index";
 /**
@@ -15,10 +15,10 @@ const Root = () => {
     <div id='Root'>
       <FirebaseStartup/>
       <BrowserRouter>
-        <Switch>
+        <Routes>
           <Route path={path}><CmsScreen/></Route>
           <Route>{"Go to /cms"}</Route>
-        </Switch>
+        </Routes>
       </BrowserRouter>
     </div>
   );
