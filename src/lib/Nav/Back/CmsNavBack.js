@@ -2,14 +2,14 @@ import './CmsNavBack.css';
 import React, {useCallback} from "react";
 import back_arrow from "../../Images/back_arrow.svg";
 import {Icon} from "react-basic-icon";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 const CmsNavBack = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const onClick = useCallback(() => {
-    history.goBack();
-  }, [history]);
+    navigate(-1);
+  }, [navigate]);
 
   return (
     <div className={'CmsNavBack'} onClick={onClick}>

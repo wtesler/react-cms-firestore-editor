@@ -5,7 +5,7 @@ import {
   EDIT_WEBSITE,
   FAILED_LOAD_CMS
 } from "../Constants/i18n";
-import {Link, useHistory} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import plusImage from "../Images/plus.svg";
 import {Icon} from "react-basic-icon";
 import AddSectionModal from "../AddSection/AddSectionModal";
@@ -17,7 +17,7 @@ const CmsLandingScreen = props => {
   const {module, headerClass} = props;
   const {toastRelay, dialogRelay, rootPath} = module;
 
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [sections, setSections] = useState(null);
 
@@ -40,8 +40,8 @@ const CmsLandingScreen = props => {
   }, [readCmsSections]);
 
   const onNewSectionSubmit = useCallback((name) => {
-    history.push(`${rootPath}/${name}`);
-  }, [history, rootPath]);
+    navigate(`${rootPath}/${name}`);
+  }, [navigate, rootPath]);
 
   const onAddClick = useCallback(() => {
     dialogRelay.show(
