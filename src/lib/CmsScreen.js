@@ -4,12 +4,14 @@ import {withModule} from "react-hoc-di";
 import CmsModule from "./Module/CmsModule";
 import {RootOverlays} from "react-root-overlays";
 import CmsLandingScreen from "./Landing/CmsLandingScreen";
-import {withRouter} from "react-router-dom";
+import {useMatch} from "react-router-dom";
 import CmsEditScreen from "./Edit/CmsEditScreen";
 import {LoginPortal} from 'react-firebase-login';
 
 const CmsScreen = props => {
-  const {match, module} = props;
+  const {module} = props;
+
+  const match = useMatch();
 
   if (match.isExact) {
     module.rootPath = match.path;
@@ -30,4 +32,4 @@ const CmsScreen = props => {
   );
 }
 
-export default withRouter(withModule(CmsScreen, CmsModule));
+export default withModule(CmsScreen, CmsModule);
