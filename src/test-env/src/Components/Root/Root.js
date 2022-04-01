@@ -16,8 +16,7 @@ const Root = () => {
       <FirebaseStartup/>
       <BrowserRouter>
         <Routes>
-          <Route path={path}><CmsScreen/></Route>
-          <Route>{"Go to /cms"}</Route>
+          <Route path={path} element={<CmsScreen/>}/>
         </Routes>
       </BrowserRouter>
     </div>
