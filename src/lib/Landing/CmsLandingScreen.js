@@ -5,7 +5,7 @@ import {
   EDIT_WEBSITE,
   FAILED_LOAD_CMS
 } from "../Constants/i18n";
-import {Link, withRouter} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import plusImage from "../Images/plus.svg";
 import {Icon} from "react-basic-icon";
 import AddSectionModal from "../AddSection/AddSectionModal";
@@ -14,8 +14,10 @@ import {CmsClient} from "react-cms-firestore";
 import {withModule} from "react-hoc-di";
 
 const CmsLandingScreen = props => {
-  const {module, history, headerClass} = props;
+  const {module, headerClass} = props;
   const {toastRelay, dialogRelay, rootPath} = module;
+
+  const history = useHistory();
 
   const [sections, setSections] = useState(null);
 
@@ -92,4 +94,4 @@ const CmsLandingScreen = props => {
   );
 }
 
-export default withRouter(withModule(CmsLandingScreen));
+export default withModule(CmsLandingScreen);

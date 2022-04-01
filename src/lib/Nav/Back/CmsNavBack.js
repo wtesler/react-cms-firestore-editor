@@ -2,10 +2,10 @@ import './CmsNavBack.css';
 import React, {useCallback} from "react";
 import back_arrow from "../../Images/back_arrow.svg";
 import {Icon} from "react-basic-icon";
-import {withRouter} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 
-const CmsNavBack = props => {
-  const {history} = props;
+const CmsNavBack = () => {
+  const history = useHistory();
 
   const onClick = useCallback(() => {
     history.goBack();
@@ -18,4 +18,4 @@ const CmsNavBack = props => {
   );
 }
 
-export default withRouter(CmsNavBack);
+export default CmsNavBack;

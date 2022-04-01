@@ -5,13 +5,15 @@ import CmsEditNavBar from './NavBar/CmsEditNavBar';
 import {ACCESS_DENIED, FAILED_LOAD_CMS, FAILED_SAVE_CMS, SAVE, SAVING} from '../Constants/i18n';
 import CmsEditModule from './Module/CmsEditModule';
 import CmsSection from '../Section/CmsSection';
-import {withRouter} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 import {URLHelper} from '../URL/URLHelper';
 import {CmsClient} from 'react-cms-firestore';
 
 const CmsEditScreen = props => {
-  const {module, location} = props;
+  const {module} = props;
   const {toastRelay} = module;
+
+  const location = useLocation();
 
   const [cmsData, setCmsData] = useState(null);
   const [cmsKey, setCmsKey] = useState(null);
@@ -81,4 +83,4 @@ const CmsEditScreen = props => {
   );
 }
 
-export default withRouter(withModule(CmsEditScreen, CmsEditModule));
+export default withModule(CmsEditScreen, CmsEditModule);

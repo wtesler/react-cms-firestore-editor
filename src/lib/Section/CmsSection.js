@@ -6,13 +6,15 @@ import removeImage from "../Images/remove.svg";
 import plusImage from "../Images/plus.svg";
 import AddEntryModal from "../Edit/AddEntry/AddEntryModal";
 import {DELETING, FAILED_DELETE_SECTION} from "../Constants/i18n";
-import {withRouter} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {CmsClient} from "react-cms-firestore";
 import {Icon} from "react-basic-icon";
 
 const CmsSection = props => {
-  const {cmsKey, data, module, requests, history} = props;
+  const {cmsKey, data, module, requests} = props;
   const {toastRelay, dialogRelay, rootPath} = module;
+
+  const history = useHistory();
 
   const [dirtyFlag, setDirtyFlag] = useState(Number.MIN_SAFE_INTEGER);
 
@@ -215,4 +217,4 @@ const CmsSection = props => {
   );
 }
 
-export default withRouter(withModule(CmsSection));
+export default withModule(CmsSection);
