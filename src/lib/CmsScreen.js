@@ -1,35 +1,24 @@
 import './CmsScreen.css';
-import React, {useMemo} from "react";
-import {withModule} from "react-hoc-di";
-import CmsModule from "./Module/CmsModule";
+import React from "react";
 import {RootOverlays} from "react-root-overlays";
 import CmsLandingScreen from "./Landing/CmsLandingScreen";
-import {useMatch} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import CmsEditScreen from "./Edit/CmsEditScreen";
 import {LoginPortal} from 'react-firebase-login';
 
-const CmsScreen = props => {
-  const {module} = props;
-
-  const match = useMatch();
-
-  if (match.isExact) {
-    module.rootPath = match.path;
-  }
-
-  const page = useMemo(() => {
-    return match.isExact ? <CmsLandingScreen/> : <CmsEditScreen/>;
-  }, [match])
-
+const CmsScreen = () => {
   return (
     <div className={'CmsScreen'}>
       <RootOverlays>
         <LoginPortal>
-          {page}
+          <Routes>
+            <Route path={'/'} element={<CmsLandingScreen/>}/>
+            <Route path={'/*'} element={<CmsEditScreen/>}/>
+          </Routes>
         </LoginPortal>
       </RootOverlays>
     </div>
   );
 }
 
-export default withModule(CmsScreen, CmsModule);
+export default CmsScreen;

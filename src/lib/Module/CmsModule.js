@@ -1,6 +1,5 @@
 const CmsModule = (rootModule) => {
   const module = {
-    rootPath: null
   };
 
   return [

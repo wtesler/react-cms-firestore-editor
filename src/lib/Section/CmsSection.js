@@ -12,7 +12,7 @@ import {Icon} from "react-basic-icon";
 
 const CmsSection = props => {
   const {cmsKey, data, module, requests} = props;
-  const {toastRelay, dialogRelay, rootPath} = module;
+  const {toastRelay, dialogRelay} = module;
 
   const navigate = useNavigate();
 
@@ -95,13 +95,13 @@ const CmsSection = props => {
         toastRelay.show(DELETING, true);
         await CmsClient.deleteCmsSection(cmsKey, requests);
         toastRelay.show(null);
-        navigate(rootPath);
+        navigate(-1);
       }
     } catch (e) {
       console.error(e);
       toastRelay.show(FAILED_DELETE_SECTION, false, 5000);
     }
-  }, [toastRelay, requests, cmsKey, navigate, rootPath]);
+  }, [toastRelay, requests, cmsKey, navigate]);
 
   const items = useMemo(() => {
     const elements = [];

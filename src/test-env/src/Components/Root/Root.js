@@ -9,7 +9,7 @@ import CmsScreen from "../../../../lib/index";
 const Root = () => {
   // const main = <CmsScreen/>;
 
-  const path = '/cms';
+  const path = '/cms/*';
 
   return (
     <div id='Root'>

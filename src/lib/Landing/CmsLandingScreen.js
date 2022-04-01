@@ -5,7 +5,7 @@ import {
   EDIT_WEBSITE,
   FAILED_LOAD_CMS
 } from "../Constants/i18n";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import plusImage from "../Images/plus.svg";
 import {Icon} from "react-basic-icon";
 import AddSectionModal from "../AddSection/AddSectionModal";
@@ -15,9 +15,10 @@ import {withModule} from "react-hoc-di";
 
 const CmsLandingScreen = props => {
   const {module, headerClass} = props;
-  const {toastRelay, dialogRelay, rootPath} = module;
+  const {toastRelay, dialogRelay} = module;
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [sections, setSections] = useState(null);
 
@@ -40,8 +41,8 @@ const CmsLandingScreen = props => {
   }, [readCmsSections]);
 
   const onNewSectionSubmit = useCallback((name) => {
-    navigate(`${rootPath}/${name}`);
-  }, [navigate, rootPath]);
+    navigate(`${location.pathname}/${name}`);
+  }, [navigate, location]);
 
   const onAddClick = useCallback(() => {
     dialogRelay.show(
@@ -60,7 +61,7 @@ const CmsLandingScreen = props => {
     for (const section of sections) {
       elements.push((
         <div className={'CmsLandingScreenSectionOuter'} key={section}>
-          <Link to={`${rootPath}/${section}`} className={`CmsLandingScreenSection`}>
+          <Link to={`${location.pathname}/${section}`} className={`CmsLandingScreenSection`}>
             {section}
           </Link>
         </div>
@@ -84,7 +85,7 @@ const CmsLandingScreen = props => {
         </div>
       </div>
     );
-  }, [sections, onAddClick, headerClass, rootPath]);
+  }, [sections, onAddClick, headerClass, location]);
 
   return (
     <div id="CmsLandingScreen">

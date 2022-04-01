@@ -10,7 +10,7 @@ const CmsScreen = import('react-cms-firestore-editor');
 // ...
 // Route to it
 // ...
-<Route path={ROUTE_CMS}><CmsScreen/></Route>
+<Route path={`${ROUTE_CMS}/*`><CmsScreen/></Route>
 ```
 
 ### Firebase config for test environment:
